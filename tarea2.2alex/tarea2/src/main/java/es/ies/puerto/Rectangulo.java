@@ -15,7 +15,9 @@ public class Rectangulo {
     private int base;
     private int altura;
 
-    //Constructor
+    //Constructores
+    public Rectangulo() {}
+    
     public Rectangulo(int base, int altura){
         setBase(base);
         setAltura(altura);

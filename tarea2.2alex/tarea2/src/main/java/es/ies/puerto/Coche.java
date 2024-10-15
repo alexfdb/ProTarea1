@@ -18,7 +18,8 @@ public class Coche {
     private String modelo;
     private int anio;
 
-    //Constructor
+    //Constructores
+    public Coche() {}
 
     public Coche(String marca, String modelo, int anio) {
         setMarca(marca);

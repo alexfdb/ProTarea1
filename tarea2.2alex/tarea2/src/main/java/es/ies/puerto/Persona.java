@@ -14,7 +14,9 @@ public class Persona {
     private String nombre;
     private int edad;
 
-    //Constructor
+    //Constructores
+    public Persona () {}
+    
     public Persona(String nombre, int edad) {
         setNombre(nombre);
         setEdad(edad);
