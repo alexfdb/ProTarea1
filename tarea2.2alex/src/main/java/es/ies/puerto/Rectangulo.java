@@ -3,11 +3,15 @@ package es.ies.puerto;
 /**
  * @author alexfdb
  * @version 1.1.0
+ * 
  * Ejercicio 5 Crea una clase llamada Rectangulo con los atributos base y altura. 
  * Implementa un método que calcule el área del rectángulo. Usa getters y setters 
  * para los atributos.
+ * Crea un objeto de la clase Rectangulo con base 5 y altura 10. Muestra el área calculada del rectángulo.
+ * 
  * Ejercicio 6 Añade un método en la clase Rectangulo que calcule el perímetro 
  * del rectángulo.
+ * Crea un objeto de la clase Rectangulo con base 4 y altura 7. Muestra el perímetro calculado del rectángulo.
  */
 
 public class Rectangulo {
@@ -69,9 +73,7 @@ public class Rectangulo {
     public String toString() {
         return "Rectangulo{" + 
                 "Base: " + base +
-                ", Altura: " + altura + 
-                ", Área: " + calcularArea() +
-                ", Perímetro: " + calcularPerimetro() +
+                ", Altura: " + altura +
                 '}';
     }
 }

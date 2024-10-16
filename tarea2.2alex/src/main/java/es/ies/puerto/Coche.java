@@ -3,10 +3,16 @@ package es.ies.puerto;
 /**
  * @author alexfdb
  * @version 1.1.0
+ * 
  * Ejercicio 3 Crea una clase Coche con los atributos marca, modelo y año. 
  * Incluye un constructor y métodos getter y setter para cada atributo.
+ * Crea un objeto de la clase Coche con marca "Toyota", modelo "Corolla", y año 
+ * 2022. Muestra los atributos del coche (marca, modelo, año) usando getters.
+ * 
  * Ejercicio 4 Modifica la clase Coche para que el setter del atributo año solo 
  * permita valores mayores o iguales a 1886 (año de creación del primer coche).
+ * Crea un objeto de la clase Coche con marca "Ford", modelo "Mustang", y año 2020. 
+ * Intenta asignar un año menor a 1886 y muestra el resultado de la validación.
  */
 
 public class Coche {
