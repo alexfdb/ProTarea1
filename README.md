@@ -1,2 +1,2 @@
 # ProTarea2
-1º Dam Primera tanda de tareas de programación.
+1º DAM Primera tanda de tareas de programación.
