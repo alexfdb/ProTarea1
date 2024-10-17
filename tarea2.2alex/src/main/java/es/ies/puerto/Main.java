@@ -9,9 +9,13 @@ public class Main {
     public static void main(String[] args) {
         pruebaPersona();
         pruebaCoche();
-        preubaRectangulo();
+        pruebaRectangulo();
         pruebaBanco();
         pruebasEmpleado();
+        pruebaCuentaBancaria();
+        pruebasLibro();
+        pruebasAlumno();
+        pruebasProducto();
     }
 
     //Pruebas de la clase Persona
@@ -36,7 +40,7 @@ public class Main {
     }
 
     //Pruebas de la clase Rectngulo
-    public static void preubaRectangulo(){
+    public static void pruebaRectangulo(){
         Rectangulo rectangulo1 = new Rectangulo(5, 10);
         Rectangulo rectangulo2 = new Rectangulo(4, 7);
 
@@ -63,5 +67,53 @@ public class Main {
 
         System.out.println(empleado1);
         System.out.println(empleado2);
+    }
+
+    //Pruebas de la clase CuentaBancaria
+    public static void pruebaCuentaBancaria() {
+        CuentaBancaria cuentaBancaria1 = new CuentaBancaria("Pedro", 1500);
+        CuentaBancaria cuentaBancaria2 = new CuentaBancaria("Laura", 1000);
+        CuentaBancaria cuentaBancaria3 = new CuentaBancaria("Luis", 500);
+        CuentaBancaria cuentaBancaria4 = new CuentaBancaria("Sofía", 3000);
+
+        cuentaBancaria1.transferencia(cuentaBancaria2, 500);
+        cuentaBancaria3.transferencia(cuentaBancaria4, 500);
+
+        System.out.println(cuentaBancaria1);
+        System.out.println(cuentaBancaria2);
+        System.out.println(cuentaBancaria3);
+        System.out.println(cuentaBancaria4);
+    }
+
+    //Pruebas de la clase Libro
+    public static void pruebasLibro() {
+        Libro libro1 = new Libro("El Quijote", "Cervantes", 500);
+
+        System.out.println(libro1);
+    }
+
+    //Pruebas de la clase Alumno
+    public static void pruebasAlumno() {
+        Alumno alumno1 = new Alumno("Lucía", 7);
+        Alumno alumno2 = new Alumno("Jorge", 10);
+
+        alumno1.aprobado(alumno1);
+        alumno2.aprobado(alumno2);
+
+        System.out.println(alumno1);
+        System.out.println(alumno2);
+    }
+
+    //Pruebas de la clase Producto
+    public static void pruebasProducto() {
+        Producto producto1 = new Producto("Laptop", 1000, 50);
+        Producto producto2 = new Producto("Cámara", 300, 20);
+
+        System.out.println(producto2);
+
+        producto2.venderProducto(5);
+
+        System.out.println(producto1);
+        System.out.println(producto2);
     }
 }
