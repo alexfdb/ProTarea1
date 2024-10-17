@@ -13,7 +13,6 @@ package es.ies.puerto;
  * Crea un objeto de la clase Producto con nombre "Cámara", precio 300, y stock 20. 
  * Realiza una venta de 5 unidades y muestra el stock restante y el total de la venta.
  */
-
 public class Producto {
     
     private String nombre;
@@ -84,9 +83,7 @@ public class Producto {
     }
 
     /**
-     * Método para vender productos
-     * 
-     * @param cantidad de productos a vender
+     * @param cantidad
      */
     public void venderProducto(int cantidad) {
         if (this.stock < cantidad) {
@@ -97,6 +94,7 @@ public class Producto {
         System.out.println("Se ha vendidio un total de " + cantidad + " unidades, del producto " + nombre + " por un precio total de " + String.format("%.2f", costoVenta) + " $.");
     }
 
+    @Override
     public String toString() {
         return "Producto{" + 
                 "Nombre: " + nombre +

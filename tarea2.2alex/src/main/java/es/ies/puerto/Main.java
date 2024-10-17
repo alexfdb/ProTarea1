@@ -16,6 +16,8 @@ public class Main {
         pruebasLibro();
         pruebasAlumno();
         pruebasProducto();
+        pruebasVehiculo();
+        pruebasCirculo();
     }
 
     //Pruebas de la clase Persona
@@ -54,8 +56,10 @@ public class Main {
     public static void pruebaBanco(){
         Banco cuenta1 = new Banco(1000);
 
-        cuenta1.depositar(500);
-        cuenta1.retirar(200);
+        System.out.println(cuenta1);
+
+        cuenta1.depositarSaldo(500);
+        cuenta1.retirarSaldo(200);
 
         System.out.println(cuenta1);
     }
@@ -76,8 +80,13 @@ public class Main {
         CuentaBancaria cuentaBancaria3 = new CuentaBancaria("Luis", 500);
         CuentaBancaria cuentaBancaria4 = new CuentaBancaria("Sofía", 3000);
 
-        cuentaBancaria1.transferencia(cuentaBancaria2, 500);
-        cuentaBancaria3.transferencia(cuentaBancaria4, 500);
+        System.out.println(cuentaBancaria1);
+        System.out.println(cuentaBancaria2);
+        System.out.println(cuentaBancaria3);
+        System.out.println(cuentaBancaria4);
+
+        cuentaBancaria1.transferenciaSaldo(cuentaBancaria2, 500);
+        cuentaBancaria3.transferenciaSaldo(cuentaBancaria4, 500);
 
         System.out.println(cuentaBancaria1);
         System.out.println(cuentaBancaria2);
@@ -95,10 +104,10 @@ public class Main {
     //Pruebas de la clase Alumno
     public static void pruebasAlumno() {
         Alumno alumno1 = new Alumno("Lucía", 7);
-        Alumno alumno2 = new Alumno("Jorge", 10);
+        Alumno alumno2 = new Alumno("Jorge", 5);
 
-        alumno1.aprobado(alumno1);
-        alumno2.aprobado(alumno2);
+        System.out.println('¿' + alumno1.getNombre() + " a aprobado? " + alumno1.aprobado());
+        System.out.println('¿' + alumno2.getNombre() + " a aprobado? " + alumno2.aprobado());
 
         System.out.println(alumno1);
         System.out.println(alumno2);
@@ -115,5 +124,31 @@ public class Main {
 
         System.out.println(producto1);
         System.out.println(producto2);
+    }
+
+    //Pruebas de la clase Vehiculo
+    public static void pruebasVehiculo() {
+        Vehiculo vehiculo1 = new Vehiculo("Honda", "Civic", 40);
+        Vehiculo vehiculo2 = new Vehiculo("Ford", "Fiesta", 40);
+
+        System.out.println(vehiculo1);
+        System.out.println(vehiculo2);
+
+        vehiculo2.repostarVehiculo(20);
+
+        System.out.println(vehiculo2);
+
+    }
+
+    //Pruebas de la clase Circulo
+    public static void pruebasCirculo() {
+        Circulo circulo1 = new Circulo(5);
+        Circulo circulo2 = new Circulo(10);
+
+        System.out.println("El area del circulo1 es " + circulo1.calcularArea());
+        System.out.println("El perimetro del circulo1 es " + circulo1.calcularPerimetro());
+
+        System.out.println(circulo1);
+        System.out.println(circulo2);
     }
 }

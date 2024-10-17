@@ -13,21 +13,44 @@ package es.ies.puerto;
  * del rectángulo.
  * Crea un objeto de la clase Rectangulo con base 4 y altura 7. Muestra el perímetro calculado del rectángulo.
  */
-
 public class Rectangulo {
     
     private int base;
     private int altura;
 
-    //Constructores
+    /**
+     * Constructor por defecto
+     */
     public Rectangulo() {}
     
+    /**
+     * Constructor completo
+     * @param base
+     * @param altura
+     */
     public Rectangulo(int base, int altura){
         setBase(base);
         setAltura(altura);
     }
 
-    //Validaciones
+    public int getBase() {
+        return base;
+    }
+
+    public int getAltura() {
+        return altura;
+    }
+
+    public void setBase(int base) {
+        validarBase(base);
+        this.base = base;
+    }
+
+    public void setAltura(int altura) {
+        validarAltura(altura);
+        this.altura = altura;
+    }
+
     private void validarBase(int base) {
         if (base < 0) {
             throw new IllegalArgumentException("La base no puede ser negativa.");
@@ -40,27 +63,6 @@ public class Rectangulo {
         }
     }
 
-    //Getters
-    public int getBase() {
-        return base;
-    }
-
-    public int getAltura() {
-        return altura;
-    }
-
-    //Setters
-    public void setBase(int base) {
-        validarBase(base);
-        this.base = base;
-    }
-
-    public void setAltura(int altura) {
-        validarAltura(altura);
-        this.altura = altura;
-    }
-
-    //Calculos
     public float calcularArea() {
         return (float) base * altura;
     }
@@ -69,7 +71,7 @@ public class Rectangulo {
         return 2 * (base + altura);
     }
 
-    //toString
+    @Override
     public String toString() {
         return "Rectangulo{" + 
                 "Base: " + base +

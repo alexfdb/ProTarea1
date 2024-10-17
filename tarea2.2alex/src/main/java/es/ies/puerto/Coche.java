@@ -14,7 +14,6 @@ package es.ies.puerto;
  * Crea un objeto de la clase Coche con marca "Ford", modelo "Mustang", y año 2020. 
  * Intenta asignar un año menor a 1886 y muestra el resultado de la validación.
  */
-
 public class Coche {
 
     private static final int ANIO_MINIMO = 1886;
@@ -24,16 +23,50 @@ public class Coche {
     private String modelo;
     private int anio;
 
-    //Constructores
+    /**
+     * Constructor por defecto
+     */
     public Coche() {}
 
+    /**
+     * Constructor completo
+     * @param marca
+     * @param modelo
+     * @param anio
+     */
     public Coche(String marca, String modelo, int anio) {
         setMarca(marca);
         setModelo(modelo);
         setAnio(anio);
     }
 
-    //Validaciones
+    public String getMarca(){
+        return marca;
+    }
+
+    public String getModelo(){
+        return modelo;
+    }
+
+    public int getAnio(){
+        return anio;
+    }
+
+    public void setMarca(String marca){
+        validarMarca(marca);
+        this.marca = marca;
+    }
+
+    public void setModelo(String modelo){
+        validarModelo(modelo);
+        this.modelo = modelo;
+    }
+
+    public void setAnio(int anio){
+        validarAnio(anio);
+        this.anio = anio;
+    }
+
     private void validarMarca(String marca){
         if (marca == null || marca.isEmpty()) {
             throw new IllegalArgumentException("La marca no puede ser nulo o vacío");
@@ -52,42 +85,12 @@ public class Coche {
         }
     }
 
-    //Getters
-    public String getMarca(){
-        return marca;
-    }
-
-    public String getModelo(){
-        return modelo;
-    }
-
-    public int getAnio(){
-        return anio;
-    }
-
-    //Setters
-    public void setMarca(String marca){
-        validarMarca(marca);
-        this.marca = marca;
-    }
-
-    public void setModelo(String modelo){
-        validarModelo(modelo);
-        this.modelo = modelo;
-    }
-
-    public void setAnio(int anio){
-        validarAnio(anio);
-        this.anio = anio;
-    }
-
-    //Para imprimir información
-
+    @Override
     public String toString() {
         return "Coche{" +
                "Marca: " + marca +
-               "/ Modelo: " + modelo +
-               "/ Anio: " + anio +
+               ", Modelo: " + modelo +
+               ", Anio: " + anio +
                '}';
     }
 }

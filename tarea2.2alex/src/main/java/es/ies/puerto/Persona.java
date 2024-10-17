@@ -13,21 +13,44 @@ package es.ies.puerto;
  * Crea un objeto de la clase Persona con nombre "Maria" y edad 25. 
  * Modifica la edad a 26 usando el setter y muestra la edad actualizada.
  */
-
 public class Persona {
 
     private String nombre;
     private int edad;
 
-    //Constructores
+    /**
+     * Constructor por defecto
+     */
     public Persona () {}
     
+    /**
+     * Constructor completo
+     * @param nombre
+     * @param edad
+     */
     public Persona(String nombre, int edad) {
         setNombre(nombre);
         setEdad(edad);
     }
 
-    //Validaciones
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setNombre(String nombre) {
+        validarNombre(nombre);
+        this.nombre = nombre;
+    }
+
+    public void setEdad(int edad) {
+        validarEdad(edad);
+        this.edad = edad;
+    }
+
     private void validarNombre(String nombre) {
         if (nombre == null || nombre.isEmpty()) {
             throw new IllegalArgumentException("El nombre no puede ser nulo o vacío");
@@ -40,31 +63,11 @@ public class Persona {
         }
     }
 
-    //Getters
-    public String getNombre() {
-        return nombre;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    //Setters
-    public void setNombre(String nombre) {
-        validarNombre(nombre);
-        this.nombre = nombre;
-    }
-
-    public void setEdad(int edad) {
-        validarEdad(edad);
-        this.edad = edad;
-    }
-
-    //toString
+    @Override
     public String toString(){
         return "Persona{" + 
                 "Nombre: " + nombre +
-                "/ Edad: " + edad +
+                ", Edad: " + edad +
                 '}';
     }
 }

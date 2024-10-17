@@ -12,7 +12,6 @@ package es.ies.puerto;
  * Crea un objeto de la clase Empleado con nombre "Carlos", puesto "Ingeniero" y salario 3000. 
  * Intenta asignar un puesto vacío y muestra el resultado de la validación.
  */
-
 public class Empleado {
 
     private String nombre;
@@ -25,8 +24,7 @@ public class Empleado {
     public Empleado(){}
 
     /**
-     * Constructor con todos los atributos de la clase
-     * 
+     * Constructor completo
      * @param nombre Nombre del empleado
      * @param puesto Puesto del empleado
      * @param salario Salario del empleado
@@ -82,6 +80,7 @@ public class Empleado {
         }
     }
 
+    @Override
     public String toString() {
         return "Empleado{" +
                 "Nombre: " + nombre + 

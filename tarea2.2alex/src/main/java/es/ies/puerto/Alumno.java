@@ -13,7 +13,6 @@ package es.ies.puerto;
  * Crea un objeto de la clase Alumno con nombre "Jorge" y nota 11. 
  * Asegúrate de que la nota no pueda ser mayor que 10 ni menor que 0.
  */
-
 public class Alumno {
     
     private String nombre;
@@ -24,6 +23,11 @@ public class Alumno {
      */
     public Alumno() {}
 
+    /**
+     * Constructor completo
+     * @param nombre
+     * @param nota
+     */
     public Alumno(String nombre, float nota) {
         setNombre(nombre);
         setNota(nota);
@@ -61,14 +65,15 @@ public class Alumno {
         }
     }
 
-    public void aprobado(Alumno alumno) {
-        if (this.nota >= 6 ) {
-            System.out.println(this.nombre + " a aprobado con una nota de " + this.nota);
-        } else {
-            System.out.println(this.nombre + " a suspendido con una nota de " + this.nota);
-        }
+    /**
+     * 
+     * @param alumno
+     */
+    public boolean aprobado() {
+        return (this.nota >= 6);
     }
 
+    @Override
     public String toString() {
         return "Alumno{" + 
                 "Nombre: " + nombre +

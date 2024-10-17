@@ -15,19 +15,17 @@ package es.ies.puerto;
  * con saldos de 500 y 3000 respectivamente. Intenta transferir 1000 de la cuenta 
  * de Luis y muestra un mensaje de saldo insuficiente.
  */
-
 public class CuentaBancaria {
     private String titular;
     private float saldo;
 
     /**
-     * Constructor por defecto CuentaBancaria
+     * Constructor por defecto
      */
     public CuentaBancaria() {}
 
     /**
-     * Constructor CuentaBancaria
-     * 
+     * Constructor completo
      * @param titular Nombre
      * @param saldo Cantidad
      */
@@ -67,11 +65,10 @@ public class CuentaBancaria {
     }
 
     /**
-     * 
-     * @param cuentaDestino a la que se le envia la transferencia
-     * @param cantidad a enviar
+     * @param cuentaDestino
+     * @param cantidad
      */
-    public void transferencia(CuentaBancaria cuentaDestino, float cantidad) {
+    public void transferenciaSaldo(CuentaBancaria cuentaDestino, float cantidad) {
         if (cuentaDestino == null) {
             throw new IllegalArgumentException("La cuenta de destino no puede ser null");
         }
@@ -88,7 +85,7 @@ public class CuentaBancaria {
 
     /**
      * 
-     * @param cantidad a ingresar
+     * @param cantidad
      */
     public void depositar(float cantidad) {
         if (cantidad < 0) {
@@ -99,7 +96,7 @@ public class CuentaBancaria {
 
     /**
      * 
-     * @param cantidad a retirar
+     * @param cantidad
      */
     public void retirar(float cantidad) {
         if (cantidad < 0) {
@@ -112,6 +109,7 @@ public class CuentaBancaria {
         this.saldo -= cantidad;
     }
 
+    @Override
     public String toString() {
         return "CuentaBancaria {" + 
                 "Titular: " + titular + 
