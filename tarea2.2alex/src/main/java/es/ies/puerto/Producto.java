@@ -83,6 +83,11 @@ public class Producto {
         }
     }
 
+    /**
+     * Método para vender productos
+     * 
+     * @param cantidad de productos a vender
+     */
     public void venderProducto(int cantidad) {
         if (this.stock < cantidad) {
             throw new IllegalArgumentException("La cantidad a vender no puede ser mayor al stock del producto");
