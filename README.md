@@ -1,4 +1,4 @@
-# ProTarea2
+# ProTarea1
 1º DAM Primera tanda de tareas de programación. <br>
 Introdución a Java. <br>
 Operadores aritméticos. <br>
